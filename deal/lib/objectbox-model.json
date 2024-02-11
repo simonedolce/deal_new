@@ -1,0 +1,419 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7421937283968660979",
+      "lastPropertyId": "3:2223673762415263919",
+      "name": "Customer",
+      "properties": [
+        {
+          "id": "1:5516851774186259637",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4874419492983377252",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:2223673762415263919",
+          "name": "dataRegistrazione",
+          "type": 10
+        }
+      ],
+      "relations": [
+        {
+          "id": "6:3930127914050189654",
+          "name": "ordini",
+          "targetId": "15:2107980783106737387"
+        }
+      ]
+    },
+    {
+      "id": "5:2231494751016686689",
+      "lastPropertyId": "2:5764091119836067102",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:2557293599821092921",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5764091119836067102",
+          "name": "password",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:3061092638899927712",
+      "lastPropertyId": "2:1689413039428245774",
+      "name": "Deal",
+      "properties": [
+        {
+          "id": "1:1962633093878563574",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1689413039428245774",
+          "name": "dataDeal",
+          "type": 12
+        }
+      ],
+      "relations": [
+        {
+          "id": "4:2033807559193152544",
+          "name": "prodottiDeals",
+          "targetId": "7:5561898552399968852"
+        }
+      ]
+    },
+    {
+      "id": "7:5561898552399968852",
+      "lastPropertyId": "13:4965904030031740868",
+      "name": "DealProduct",
+      "properties": [
+        {
+          "id": "1:6270103936497765081",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1603959935676934635",
+          "name": "quantitativoProdottoDeal",
+          "type": 8
+        },
+        {
+          "id": "3:7094392442017399750",
+          "name": "disponibilitaPersonale",
+          "type": 8
+        },
+        {
+          "id": "4:7914961259978924824",
+          "name": "disponibilitaMercato",
+          "type": 8
+        },
+        {
+          "id": "5:2662988831073741597",
+          "name": "quantitativoProdottoDealIniziale",
+          "type": 8
+        },
+        {
+          "id": "6:2807357424692582564",
+          "name": "disponibilitaMercatoIniziale",
+          "type": 8
+        },
+        {
+          "id": "7:5314686291263940951",
+          "name": "disponibilitaPersonaleIniziale",
+          "type": 8
+        },
+        {
+          "id": "8:1578209811731703085",
+          "name": "prezzoIngrosso",
+          "type": 8
+        },
+        {
+          "id": "9:6364696224791429306",
+          "name": "prezzoDettaglio",
+          "type": 8
+        },
+        {
+          "id": "10:6978403066748263535",
+          "name": "importoInvestito",
+          "type": 8
+        },
+        {
+          "id": "11:5651715228592633391",
+          "name": "importoRientrato",
+          "type": 8
+        },
+        {
+          "id": "12:4287141949171608366",
+          "name": "productId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:8060435054879000933",
+          "relationTarget": "Product"
+        },
+        {
+          "id": "13:4965904030031740868",
+          "name": "dealId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "5:4755729650070530509",
+          "relationTarget": "Deal"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:4465628612806599345",
+      "lastPropertyId": "4:169144383861786057",
+      "name": "Debt",
+      "properties": [
+        {
+          "id": "1:2534119368682866148",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5085528762624293416",
+          "name": "importoDebito",
+          "type": 8
+        },
+        {
+          "id": "3:3555378813472284802",
+          "name": "isAttivo",
+          "type": 1
+        },
+        {
+          "id": "4:169144383861786057",
+          "name": "orderId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "6:2282129787479565973",
+          "relationTarget": "Orders"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:6393049226164773591",
+          "name": "sanamenti",
+          "targetId": "12:6493750567869354648"
+        }
+      ]
+    },
+    {
+      "id": "9:1124073054392947700",
+      "lastPropertyId": "8:7664626469273364576",
+      "name": "OrderProduct",
+      "properties": [
+        {
+          "id": "1:3392136919149767572",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "3:2970733072447537816",
+          "name": "orderId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "8:1552700487162599384",
+          "relationTarget": "Orders"
+        },
+        {
+          "id": "4:7082428116494310386",
+          "name": "quantitativoEffetivo",
+          "type": 8
+        },
+        {
+          "id": "5:4604783356261706028",
+          "name": "quantitativoPrevisto",
+          "type": 8
+        },
+        {
+          "id": "6:8604375090009471001",
+          "name": "prezzoAlDettaglio",
+          "type": 8
+        },
+        {
+          "id": "8:7664626469273364576",
+          "name": "productDealsId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "13:6515444724830741292",
+          "relationTarget": "DealProduct"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:4556266859434969460",
+      "lastPropertyId": "3:3111809821413450694",
+      "name": "Product",
+      "properties": [
+        {
+          "id": "1:8489948083344007359",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:17228389796426893",
+          "name": "nomeProdotto",
+          "type": 9
+        },
+        {
+          "id": "3:3111809821413450694",
+          "name": "productTypeId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "9:7859735244942421208",
+          "relationTarget": "ProductType"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "11:6423481890464417457",
+      "lastPropertyId": "2:6410116553174520163",
+      "name": "ProductType",
+      "properties": [
+        {
+          "id": "1:4333733580959882999",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6410116553174520163",
+          "name": "descrizione",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "12:6493750567869354648",
+      "lastPropertyId": "4:5385269386489482799",
+      "name": "SanamentoDebt",
+      "properties": [
+        {
+          "id": "1:1189691865231792100",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6075047463116745232",
+          "name": "importoSanamento",
+          "type": 8
+        },
+        {
+          "id": "3:7431614706668335382",
+          "name": "dataSanamento",
+          "type": 10
+        },
+        {
+          "id": "4:5385269386489482799",
+          "name": "debtId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "10:8063036792118887540",
+          "relationTarget": "Debt"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "15:2107980783106737387",
+      "lastPropertyId": "6:593888358760863597",
+      "name": "Orders",
+      "properties": [
+        {
+          "id": "1:5804748898647414377",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8984138755418855494",
+          "name": "dataOrdine",
+          "type": 10
+        },
+        {
+          "id": "3:1723933015870432",
+          "name": "totale",
+          "type": 8
+        },
+        {
+          "id": "4:1094560310426541483",
+          "name": "totalePagato",
+          "type": 8
+        },
+        {
+          "id": "5:1385039407649399390",
+          "name": "customerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "16:7163126801125111579",
+          "relationTarget": "Customer"
+        },
+        {
+          "id": "6:593888358760863597",
+          "name": "debitoId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "17:7273772196165436871",
+          "relationTarget": "Debt"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "15:2107980783106737387",
+  "lastIndexId": "17:7273772196165436871",
+  "lastRelationId": "6:3930127914050189654",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    884030905509662122,
+    257201642756106755,
+    5245553160419466542,
+    8586908177687289627,
+    1576822813800708800
+  ],
+  "retiredIndexUids": [
+    131524144732979452,
+    8298782280754652945
+  ],
+  "retiredPropertyUids": [
+    1975222495793962740,
+    8043038160531673834,
+    2687092531684021470,
+    76413241076206140,
+    5215157557861024433,
+    8543192397797117595,
+    2880646533337085370,
+    8912586727357451538,
+    7594814273562739068,
+    3923481109024574258,
+    7094020053717878564,
+    7781155493796407157,
+    5369197525130972151,
+    5694305362969215916,
+    7157159269532012433,
+    145666572110055604,
+    200188159605625170,
+    7310607724477652279,
+    6877219232680989871,
+    6518132426318218851,
+    6093154372538413757,
+    8656927061465280274,
+    8974923324652400266,
+    7890976512064044782,
+    1064653204468388923,
+    1848710549829408340,
+    8119967533118138616,
+    6175130035943107421
+  ],
+  "retiredRelationUids": [
+    8267292149522660579,
+    4357842856668421892
+  ],
+  "version": 1
+}
